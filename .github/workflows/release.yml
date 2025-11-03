@@ -1,0 +1,11 @@
+name: role_release
+
+"on":
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release_galaxy_role:
+    uses: hybridadmin/reuse-workflows/.github/workflows/galaxy_release.yml@main
+    secrets: inherit
